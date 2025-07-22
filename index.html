@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URPSX | Multi-Platform Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5865F2; /* Discord blurple */
+            --secondary: #00A2FF; /* Roblox blue */
+            --accent: #2ECC71; /* Minecraft green */
+            --dark: #1E1F22;
+            --darker: #121317;
+            --light: #F8F9FA;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--darker);
+            color: var(--light);
+            overflow-x: hidden;
+        }
+        
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--darker);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .preloader.fade-out {
+            opacity: 0;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid var(--primary);
+            border-top-color: transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Animated Background -->
+    <div class="particles-background"></div>
+    
+    <!-- Floating Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-logo" data-scroll="home">URPSX</div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link" data-scroll="home">Home</a>
+            <a href="#skills" class="nav-link" data-scroll="skills">Skills</a>
+            <a href="#projects" class="nav-link" data-scroll="projects">Projects</a>
+            <a href="#contact" class="nav-link" data-scroll="contact">Contact</a>
+        </div>
+        <div class="nav-social">
+            <a href="https://discord.com/users/yourid" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/urpsx" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://twitter.com/urpsx" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="nav-toggle">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-part">Hi, I'm</span>
+                <span class="title-main">URPSX</span>
+                <span class="title-sub">Multi-Platform Developer</span>
+            </h1>
+            <p class="hero-description">
+                Creating immersive experiences across Roblox, Discord, Minecraft, and the web.
+                Specializing in game development, bot creation, and interactive web applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <div class="platform-icons">
+                <div class="icon roblox" data-tooltip="Roblox Development">
+                    <img src="assets/roblox-icon.png" alt="Roblox">
+                </div>
+                <div class="icon discord" data-tooltip="Discord Bots">
+                    <img src="assets/discord-icon.png" alt="Discord">
+                </div>
+                <div class="icon minecraft" data-tooltip="Minecraft Mods & Bots">
+                    <img src="assets/minecraft-icon.png" alt="Minecraft">
+                </div>
+                <div class="icon web" data-tooltip="Web Development">
+                    <img src="assets/web-icon.png" alt="Web">
+                </div>
+            </div>
+            <div class="code-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="red"></span>
+                        <span class="yellow"></span>
+                        <span class="green"></span>
+                    </div>
+                    <div class="terminal-title">URPSX@portfolio:~</div>
+                </div>
+                <div class="terminal-content">
+                    <div class="typing-animation">
+                        <span class="prompt">$</span>
+                        <span class="command">npm init portfolio</span>
+                    </div>
+                    <div class="typing-animation delay-1">
+                        <span class="output">Initializing URPSX's portfolio...</span>
+                    </div>
+                    <div class="typing-animation delay-2">
+                        <span class="output">Loading skills: Roblox, Discord.js, Minecraft Modding, Web Dev</span>
+                    </div>
+                    <div class="typing-animation delay-3">
+                        <span class="output">Portfolio ready! Scroll to explore ↓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with across different platforms</p>
+        
+        <div class="skills-container">
+            <!-- Roblox Skills -->
+            <div class="skill-category" data-category="roblox">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img src="assets/roblox-icon.png" alt="Roblox">
+                    </div>
+                    <h3>Roblox Development</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="90"></div>
+                        <div class="skill-info">
+                            <h4>Lua</h4>
+                            <p>Advanced scripting for game mechanics</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="85"></div>
+                        <div class="skill-info">
+                            <h4>Roblox Studio</h4>
+                            <p>Full environment mastery</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="80"></div>
+                        <div class="skill-info">
+                            <h4>Game Design</h4>
+                            <p>Engaging player experiences</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discord Bots -->
+            <div class="skill-category" data-category="discord">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img src="assets/discord-icon.png" alt="Discord">
+                    </div>
+                    <h3>Discord Bots</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="95"></div>
+                        <div class="skill-info">
+                            <h4>Discord.js</h4>
+                            <p>Feature-rich bot development</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="85"></div>
+                        <div class="skill-info">
+                            <h4>API Integration</h4>
+                            <p>Connecting with external services</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="90"></div>
+                        <div class="skill-info">
+                            <h4>Bot Architecture</h4>
+                            <p>Scalable, efficient bot systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Minecraft Development -->
+            <div class="skill-category" data-category="minecraft">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img src="assets/minecraft-icon.png" alt="Minecraft">
+                    </div>
+                    <h3>Minecraft Development</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="85"></div>
+                        <div class="skill-info">
+                            <h4>Java Modding</h4>
+                            <p>Forge/Fabric mod development</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="80"></div>
+                        <div class="skill-info">
+                            <h4>Minecraft Bots</h4>
+                            <p>Automation and AI players</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="75"></div>
+                        <div class="skill-info">
+                            <h4>Plugin Development</h4>
+                            <p>Spigot/Bukkit plugins</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="skill-category" data-category="web">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <img src="assets/web-icon.png" alt="Web Development">
+                    </div>
+                    <h3>Web Development</h3>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="90"></div>
+                        <div class="skill-info">
+                            <h4>JavaScript</h4>
+                            <p>Frontend and backend</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="85"></div>
+                        <div class="skill-info">
+                            <h4>React/Next.js</h4>
+                            <p>Modern web applications</p>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-progress" data-value="80"></div>
+                        <div class="skill-info">
+                            <h4>Node.js</h4>
+                            <p>Server-side applications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <p class="section-subtitle">Some of my best work across different platforms</p>
+        
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="roblox">Roblox</button>
+            <button class="filter-btn" data-filter="discord">Discord</button>
+            <button class="filter-btn" data-filter="minecraft">Minecraft</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+        
+        <div class="projects-grid">
+            <!-- Roblox Project -->
+            <div class="project-card" data-category="roblox">
+                <div class="project-media">
+                    <img src="assets/projects/roblox-game.jpg" alt="Roblox Game">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Adventure World</h3>
+                    <p>A massive Roblox experience with custom game mechanics, economy system, and unique visuals.</p>
+                    <div class="project-tech">
+                        <span>Lua</span>
+                        <span>Roblox Studio</span>
+                        <span>Custom Shaders</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Discord Project -->
+            <div class="project-card" data-category="discord">
+                <div class="project-media">
+                    <img src="assets/projects/discord-bot.jpg" alt="Discord Bot">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Multipurpose Bot</h3>
+                    <p>Feature-rich Discord bot with moderation, games, music, and custom commands used by 500+ servers.</p>
+                    <div class="project-tech">
+                        <span>Discord.js</span>
+                        <span>Node.js</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Minecraft Project -->
+            <div class="project-card" data-category="minecraft">
+                <div class="project-media">
+                    <img src="assets/projects/minecraft-mod.jpg" alt="Minecraft Mod">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Tech Expansion</h3>
+                    <p>Minecraft mod adding new technology trees, machines, and energy systems with custom models.</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Forge</span>
+                        <span>Blockbench</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Web Project -->
+            <div class="project-card" data-category="web">
+                <div class="project-media">
+                    <img src="assets/projects/web-app.jpg" alt="Web Application">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Game Dashboard</h3>
+                    <p>Web application for managing game servers, player data, and in-game economies with real-time updates.</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>WebSockets</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-discord"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>Discord</h4>
+                        <p>urpsx</p>
+                        <a href="#" class="info-link">Open Discord</a>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>Email</h4>
+                        <p>imtherealpsx@gmail.com</p>
+                        <a href="mailto:imtherealpsx@gmail.com" class="info-link">Send Email</a>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>GitHub</h4>
+                        <p>pvp-masterk</p>
+                        <a href="https://github.com/pvp-masterk" target="_blank" class="info-link">View Profile</a>
+                    </div>
+                </div>
+            </div>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Your Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Your Email</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea id="message" rows="5" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+                
+                <button type="submit" class="btn-primary">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="animated-footer">
+        <div class="footer-content">
+            <div class="footer-logo">URPSX</div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://discord.com/users/1303491410472865793" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://www.roblox.com/communities/16425664/Refund-Bank#!/about" target="_blank"><i class="fas fa-gamepad"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 URPSX. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
